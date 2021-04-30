@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id = "@+id/main1"
+        android:icon="@drawable/check"
+        android:title="전체 지출"/>
+
+    <item
+        android:id = "@+id/main2"
+        android:icon="@drawable/ratingbar"
+        android:title="예산"/>
+
+    <item
+        android:id = "@+id/main3"
+        android:icon="@drawable/fixed"
+        android:title="고정 지출"/>
+</menu>

@@ -1,154 +1,73 @@
 package com.example.woohangsi_app;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NotificationCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
-import android.os.Build;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
+import android.widget.ImageView;
 
-import com.example.woohangsi_app.requests.Body;
-import com.example.woohangsi_app.requests.CallAPI;
-import com.example.woohangsi_app.requests.Urls;
-
-import java.io.IOException;
+import com.example.woohangsi_app.BrandCustom;
+import com.example.woohangsi_app.BudgetCategory;
+import com.example.woohangsi_app.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
-
-  public static final String NOTIFICATION_CHANNEL_ID = "10001";
-  private int count = 0;
-  Button btnGetIndivAllAccInfo, btnGetAccBasicInfo, btnGetAccTransList, btnGetCellCerti, btnExecuteCellCerti;
-  String data;
-  TextView textView;
+  private BottomNavigationView mBottomNV;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    Button button = (Button) findViewById(R.id.button);
-    button.setOnClickListener(new View.OnClickListener() {
+    mBottomNV = findViewById(R.id.nav_view);
+    mBottomNV.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() { //NavigationItemSelecte
       @Override
-      public void onClick(View arg0) {
+      public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        BottomNavigate(menuItem.getItemId());
 
-        // 버튼을 누를때마다 count 를 증가시며 최근에 보낸 노티피케이션만 사용자의 탭 대기중인지 테스트
-        count++;
-        NotificationSomethings();
+
+        return true;
       }
     });
-
-    textView = (TextView)findViewById(R.id.textView2);
-
-    // api 버튼
-    Urls urls = new Urls();
-    Body body = new Body();
-
-    btnGetIndivAllAccInfo = (Button)findViewById(R.id.btnGetIndivAllAccInfo);
-    btnGetAccBasicInfo = (Button)findViewById(R.id.btnGetAccBasicInfo);
-    btnGetAccTransList = (Button)findViewById(R.id.btnGetAccTransList);
-    btnGetCellCerti = (Button)findViewById(R.id.btnGetCellCerti);
-    btnExecuteCellCerti = (Button)findViewById(R.id.btnExecuteCellCerti);
-
-    btnGetIndivAllAccInfo.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        handleBtn(urls.getGetIndivAllAccInfo(), body.getGetIndivAllAccInfo());
-      }
-    });
-    btnGetAccBasicInfo.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        handleBtn(urls.getGetAccBasicInfo(), body.getGetAccBasicInfo());
-      }
-    });
-    btnGetAccTransList.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        handleBtn(urls.getGetAccTransList(), body.getGetAccTransList());
-      }
-    });
-    btnGetCellCerti.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        handleBtn(urls.getGetCellCerti(), body.getGetCellCerti());
-      }
-    });
-    btnExecuteCellCerti.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        handleBtn(urls.getExecuteCellCerti(), body.getExecuteCellCerti());
-      }
-    });
-
+    mBottomNV.setSelectedItemId(R.id.main1);
   }
+  private void BottomNavigate(int id) {  //BottomNavigation 페이지 변경
+    String tag = String.valueOf(id);
+    FragmentManager fragmentManager = getSupportFragmentManager();
+    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-  public void NotificationSomethings() {
+    Fragment currentFragment = fragmentManager.getPrimaryNavigationFragment();
+    if (currentFragment != null) {
+      fragmentTransaction.hide(currentFragment);
+    }
 
+    Fragment fragment = fragmentManager.findFragmentByTag(tag);
+    if (fragment == null) {
+      if (id == R.id.main1) {
+        fragment = new InquiryList();
 
-    NotificationManager notificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+      } else if (id == R.id.main2){
 
-    Intent notificationIntent = new Intent(this, ResultActivity.class);
-    notificationIntent.putExtra("notificationId", count); //전달할 값
-    notificationIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK) ;
-    PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent,  PendingIntent.FLAG_UPDATE_CURRENT);
-
-    NotificationCompat.Builder builder = new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
-            .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher_foreground)) //BitMap 이미지 요구
-            .setContentTitle("상태바 드래그시 보이는 타이틀")
-            .setContentText("상태바 드래그시 보이는 서브타이틀")
-            // 더 많은 내용이라서 일부만 보여줘야 하는 경우 아래 주석을 제거하면 setContentText에 있는 문자열 대신 아래 문자열을 보여줌
-            //.setStyle(new NotificationCompat.BigTextStyle().bigText("더 많은 내용을 보여줘야 하는 경우..."))
-            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-            .setContentIntent(pendingIntent) // 사용자가 노티피케이션을 탭시 ResultActivity로 이동하도록 설정
-            .setAutoCancel(true);
-
-    //OREO API 26 이상에서는 채널 필요
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-
-      builder.setSmallIcon(R.drawable.ic_launcher_foreground); //mipmap 사용시 Oreo 이상에서 시스템 UI 에러남
-      CharSequence channelName  = "노티페케이션 채널";
-      String description = "오레오 이상을 위한 것임";
-      int importance = NotificationManager.IMPORTANCE_HIGH;
-
-      NotificationChannel channel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, channelName , importance);
-      channel.setDescription(description);
-
-      // 노티피케이션 채널을 시스템에 등록
-      assert notificationManager != null;
-      notificationManager.createNotificationChannel(channel);
-
-    }else builder.setSmallIcon(R.mipmap.ic_launcher); // Oreo 이하에서 mipmap 사용하지 않으면 Couldn't create icon: StatusBarIcon 에러남
-
-    assert notificationManager != null;
-    notificationManager.notify(1234, builder.build()); // 고유숫자로 노티피케이션 동작시킴
-
-  }
-
-  public void handleBtn(String subUrl, String bodyString) {
-    new Thread() {
-      public void run() {
-        try {
-          CallAPI callAPI = new CallAPI(subUrl, bodyString);
-          data = callAPI.call();
-          runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-              textView.setText(data);
-            }
-          });
-        } catch (IOException e) {
-          e.printStackTrace();
-        }
+        fragment = new BarRating();
+      }else {
+        fragment = new FixedSpend();
       }
-    }.start();
+
+      fragmentTransaction.add(R.id.content_layout, fragment, tag);
+    } else {
+      fragmentTransaction.show(fragment);
+    }
+
+    fragmentTransaction.setPrimaryNavigationFragment(fragment);
+    fragmentTransaction.setReorderingAllowed(true);
+    fragmentTransaction.commitNow();
+
 
   }
 
