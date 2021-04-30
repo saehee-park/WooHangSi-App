@@ -49,7 +49,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginRight="80dp"
+                    android:layout_marginRight="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -107,6 +107,7 @@
                         android:layout_height="wrap_content"
                         android:text="원"
                         android:textColor="#673AB7"
+                        android:layout_marginRight="15dp"
                         android:textSize="30sp" />
                 </LinearLayout>
 
@@ -130,7 +131,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginRight="80dp"
+                    android:layout_marginRight="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -189,6 +190,7 @@
                         android:layout_height="wrap_content"
                         android:text="원"
                         android:textColor="#673AB7"
+                        android:layout_marginRight="15dp"
                         android:textSize="30sp" />
                 </LinearLayout>
 
@@ -212,7 +214,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginRight="80dp"
+                    android:layout_marginRight="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -271,6 +273,7 @@
                         android:layout_height="wrap_content"
                         android:text="원"
                         android:textColor="#673AB7"
+                        android:layout_marginRight="15dp"
                         android:textSize="30sp" />
                 </LinearLayout>
 
@@ -294,7 +297,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginRight="80dp"
+                    android:layout_marginRight="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -353,6 +356,7 @@
                         android:layout_height="wrap_content"
                         android:text="원"
                         android:textColor="#673AB7"
+                        android:layout_marginRight="15dp"
                         android:textSize="30sp" />
                 </LinearLayout>
 
@@ -375,7 +379,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginRight="80dp"
+                    android:layout_marginRight="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -434,6 +438,7 @@
                         android:layout_height="wrap_content"
                         android:text="원"
                         android:textColor="#673AB7"
+                        android:layout_marginRight="15dp"
                         android:textSize="30sp" />
                 </LinearLayout>
 
@@ -456,7 +461,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginRight="80dp"
+                    android:layout_marginRight="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -487,6 +492,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
+                            android:layout_marginRight="15dp"
                             android:textSize="10sp" />
                     </LinearLayout>
 
@@ -515,6 +521,7 @@
                         android:layout_height="wrap_content"
                         android:text="원"
                         android:textColor="#673AB7"
+                        android:layout_marginRight="15dp"
                         android:textSize="30sp" />
                 </LinearLayout>
 
@@ -540,7 +547,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginRight="80dp"
+                    android:layout_marginRight="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -571,6 +578,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
+                            android:layout_marginRight="15dp"
                             android:textSize="10sp" />
                     </LinearLayout>
 
@@ -598,6 +606,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="원"
+                        android:layout_marginRight="15dp"
                         android:textColor="#673AB7"
                         android:textSize="30sp" />
                 </LinearLayout>
@@ -622,7 +631,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginRight="80dp"
+                    android:layout_marginRight="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -653,6 +662,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
+                            android:layout_marginRight="15dp"
                             android:textSize="10sp" />
                     </LinearLayout>
 
@@ -681,6 +691,7 @@
                         android:layout_height="wrap_content"
                         android:text="원"
                         android:textColor="#673AB7"
+                        android:layout_marginRight="15dp"
                         android:textSize="30sp" />
                 </LinearLayout>
 
@@ -704,7 +715,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginRight="80dp"
+                    android:layout_marginRight="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -735,6 +746,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
+                            android:layout_marginRight="15dp"
                             android:textSize="10sp" />
                     </LinearLayout>
 
@@ -762,6 +774,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="원"
+                        android:layout_marginRight="15dp"
                         android:textColor="#673AB7"
                         android:textSize="30sp" />
                 </LinearLayout>
@@ -786,7 +799,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginRight="80dp"
+                    android:layout_marginRight="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -817,6 +830,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
+                            android:layout_marginRight="15dp"
                             android:textSize="10sp" />
                     </LinearLayout>
 
@@ -844,6 +858,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="원"
+                        android:layout_marginRight="15dp"
                         android:textColor="#673AB7"
                         android:textSize="30sp" />
                 </LinearLayout>
@@ -868,7 +883,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginRight="80dp"
+                    android:layout_marginRight="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -899,6 +914,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
+                            android:layout_marginRight="15dp"
                             android:textSize="10sp" />
                     </LinearLayout>
 
@@ -926,6 +942,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="원"
+                        android:layout_marginRight="15dp"
                         android:textColor="#673AB7"
                         android:textSize="30sp" />
                 </LinearLayout>
@@ -950,7 +967,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginRight="80dp"
+                    android:layout_marginRight="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -981,6 +998,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
+                            android:layout_marginRight="15dp"
                             android:textSize="10sp" />
                     </LinearLayout>
 
@@ -1008,6 +1026,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="원"
+                        android:layout_marginRight="15dp"
                         android:textColor="#673AB7"
                         android:textSize="30sp" />
                 </LinearLayout>
@@ -1033,7 +1052,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginRight="80dp"
+                    android:layout_marginRight="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -1064,6 +1083,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
+                            android:layout_marginRight="15dp"
                             android:textSize="10sp" />
                     </LinearLayout>
 
@@ -1091,6 +1111,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="원"
+                        android:layout_marginRight="15dp"
                         android:textColor="#673AB7"
                         android:textSize="30sp" />
                 </LinearLayout>
@@ -1112,7 +1133,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginRight="80dp"
+                    android:layout_marginRight="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -1143,6 +1164,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
+                            android:layout_marginRight="15dp"
                             android:textSize="10sp" />
                     </LinearLayout>
 
@@ -1170,6 +1192,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="원"
+                        android:layout_marginRight="15dp"
                         android:textColor="#673AB7"
                         android:textSize="30sp" />
                 </LinearLayout>
@@ -1191,7 +1214,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginRight="80dp"
+                    android:layout_marginRight="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -1222,6 +1245,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
+                            android:layout_marginRight="15dp"
                             android:textSize="10sp" />
                     </LinearLayout>
 
@@ -1249,6 +1273,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="원"
+                        android:layout_marginRight="15dp"
                         android:textColor="#673AB7"
                         android:textSize="30sp" />
                 </LinearLayout>
@@ -1270,7 +1295,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginRight="80dp"
+                    android:layout_marginRight="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -1301,6 +1326,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
+                            android:layout_marginRight="15dp"
                             android:textSize="10sp" />
                     </LinearLayout>
 
@@ -1328,6 +1354,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="원"
+                        android:layout_marginRight="15dp"
                         android:textColor="#673AB7"
                         android:textSize="30sp" />
                 </LinearLayout>
@@ -1349,7 +1376,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginRight="80dp"
+                    android:layout_marginRight="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -1380,6 +1407,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
+                            android:layout_marginRight="15dp"
                             android:textSize="10sp" />
                     </LinearLayout>
 
@@ -1407,6 +1435,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="원"
+                        android:layout_marginRight="15dp"
                         android:textColor="#673AB7"
                         android:textSize="30sp" />
                 </LinearLayout>
@@ -1459,6 +1488,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="원"
+                            android:layout_marginRight="15dp"
                             android:textSize="10sp" />
                     </LinearLayout>
 
@@ -1486,6 +1516,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="원"
+                        android:layout_marginRight="15dp"
                         android:textColor="#673AB7"
                         android:textSize="30sp" />
                 </LinearLayout>

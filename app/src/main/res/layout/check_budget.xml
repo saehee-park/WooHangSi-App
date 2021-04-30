@@ -45,7 +45,7 @@
                 android:textSize="30sp" />
 
             <EditText
-                android:id="@+id/beginBudget"
+                android:id="@+id/Budget"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
@@ -56,13 +56,14 @@
                 android:gravity="center_horizontal" />
 
             <Button
+                android:id="@+id/detail_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_gravity="right"
                 android:background="#FFFFFF"
                 android:text="상세보기 >"
                 android:textColor="#000000"
-                app:backgroundTint="#FFFFFF" />
+                app:backgroundTint="#00FFFFFF" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -72,14 +73,13 @@
 
 
             <Button
+                android:id="@+id/getpoint_btn"
                 android:layout_width="300dp"
                 android:layout_gravity="center"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
                 android:textSize="18sp"
                 android:text="포인트 받기"/>
-
-
         </LinearLayout>
 
         <LinearLayout
@@ -88,9 +88,11 @@
             android:orientation="vertical">
 
             <Button
+                android:id="@+id/back_btn"
                 android:layout_width="64dp"
                 android:layout_height="wrap_content"
-                android:background="#FFFFFF"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00FFFFFF"
                 android:text="&lt;&lt;"
                 android:textColor="#000000"
                 android:textSize="20sp" />
@@ -102,7 +104,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
@@ -111,8 +112,8 @@
                     android:textAlignment="center"
                     android:textSize="30sp" />
 
-                <EditText
-                    android:id="@+id/editTextTextPersonName"
+                <TextView
+                    android:id="@+id/goal_budget"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
@@ -126,12 +127,11 @@
                 <View
                     android:id="@+id/divider"
                     android:layout_width="match_parent"
-                    android:layout_height="20dp"
+                    android:layout_height="5dp"
                     android:layout_marginBottom="30dp"
                     android:background="#673AB7" />
 
                 <TextView
-                    android:id="@+id/textView1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
@@ -140,8 +140,8 @@
                     android:textAlignment="center"
                     android:textSize="30sp" />
 
-                <EditText
-                    android:id="@+id/editTextTextPersonName1"
+                <TextView
+                    android:id="@+id/pay_budget"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
@@ -151,19 +151,7 @@
                     android:text="1,160,555"
                     android:textAlignment="center"
                     android:textSize="40sp" />
-
-
             </LinearLayout>
-
         </LinearLayout>
-
-
-
-
     </ViewFlipper>
-
-
-
-
-
 </LinearLayout>

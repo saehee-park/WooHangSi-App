@@ -219,7 +219,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/txtCustomer"
+                    android:id="@+id/txtCustomer2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="김지현"
@@ -252,7 +252,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/top1"
+                        android:id="@+id/top1_2"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_gravity="center"
@@ -345,7 +345,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/top2"
+                        android:id="@+id/top2_2"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_gravity="center"
@@ -438,7 +438,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/top3"
+                        android:id="@+id/top3_2"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_gravity="center"
