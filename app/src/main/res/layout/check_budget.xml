@@ -73,7 +73,7 @@
 
 
             <Button
-                android:id="@+id/getpoint_btn"
+                android:id="@+id/getPoint_btn"
                 android:layout_width="300dp"
                 android:layout_gravity="center"
                 android:layout_height="wrap_content"

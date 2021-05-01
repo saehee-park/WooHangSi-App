@@ -121,7 +121,7 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/txttop1"
+                        android:id="@+id/txtTop1"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
@@ -153,7 +153,7 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/txttop2"
+                        android:id="@+id/txtTop2"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
@@ -184,7 +184,7 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/txttop3"
+                        android:id="@+id/txtTop3"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
