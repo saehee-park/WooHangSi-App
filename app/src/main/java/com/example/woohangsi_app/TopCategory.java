@@ -3,6 +3,7 @@ package com.example.woohangsi_app;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
@@ -17,6 +18,7 @@ public class TopCategory extends AppCompatActivity {
     ImageView top1, top2, top3, top1_2, top2_2, top3_2;
     Button btnRecommend, btnApply;
     ViewFlipper vFlipper;
+    CheckBox top1check, top2check, top3check;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,12 +51,23 @@ public class TopCategory extends AppCompatActivity {
         btnRecommend = (Button) findViewById(R.id.btnRecommend);
         btnApply = (Button) findViewById(R.id.btnApply);
 
+        top1check = (CheckBox) findViewById(R.id.top1check);
+        top2check = (CheckBox) findViewById(R.id.top2check);
+        top2check = (CheckBox) findViewById(R.id.top3check);
+
         vFlipper = (ViewFlipper) findViewById(R.id.vFlipper);
 
         btnRecommend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 vFlipper.showNext();
+            }
+        });
+
+        btnApply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
     }
