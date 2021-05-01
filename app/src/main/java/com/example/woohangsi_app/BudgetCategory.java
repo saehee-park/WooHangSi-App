@@ -1,23 +1,28 @@
 package com.example.woohangsi_app;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class BudgetCategory extends AppCompatActivity {
 
+    public static final int REQUEST_CODE_MENU=101;
+
     TextView txtCustomer, txtMonth, Budget, leftBudget, foodLastCost, cafeLastCost, alcholLastCost,
             lifeLastCost, shoppingLastCost, fashionLastCost, beautyLastCost, trafficLastCost, carLastCost,
             houseLastCost, healthLastCost, capitalLastCost, cultureLastCost, travelLastCost, educateLastCost,
             childrenLastCost, petLastCost, presentLastCost;
-    Button btnSelect;
+    Button btnSelect, bring;
     LinearLayout food, cafe, alchol, life, shopping, fashion, beauty, traffic, car, house, health, capital,
             culture, travel, educate, children, pet, present;
     EditText foodBudget, cafeBudget, alcholBudget, lifeBudget, shoppingBudget, fashionBudget, beautyBudget,
@@ -58,6 +63,7 @@ public class BudgetCategory extends AppCompatActivity {
         presentLastCost = (TextView) findViewById(R.id.presentLastCost);
 
         btnSelect = (Button) findViewById(R.id.btnSelect);
+        bring = (Button)findViewById(R.id.bring);
 
         food = (LinearLayout) findViewById(R.id.food);
         cafe = (LinearLayout) findViewById(R.id.cafe);
@@ -126,5 +132,30 @@ public class BudgetCategory extends AppCompatActivity {
             }
         });
 
+        bring.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), BudgetTotal.class);
+                startActivityForResult(intent, REQUEST_CODE_MENU);
+            }
+        });
+
     }
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == REQUEST_CODE_MENU) {
+            Toast.makeText(getApplicationContext(),
+                    "onActivityResult 메소드 호출됨. 요청 코드 : " + requestCode +
+                            ", 결과 코드 : " + resultCode, Toast.LENGTH_LONG).show();
+            if (resultCode == RESULT_OK) {
+                String total = data.getStringExtra("total");
+                Toast.makeText(getApplicationContext(), "응답으로 전달된 name : " + total,
+                        Toast.LENGTH_LONG).show();
+                Budget.setText(total);
+            }
+        }
+
+    }
+
 }

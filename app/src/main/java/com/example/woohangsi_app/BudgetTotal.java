@@ -1,5 +1,6 @@
 package com.example.woohangsi_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -41,6 +42,11 @@ public class BudgetTotal extends AppCompatActivity {
                 Budget_view.setVisibility(View.VISIBLE);
                 Budget_write_btn.setVisibility(View.GONE);
                 Budget_view_btn.setVisibility(View.VISIBLE);
+
+                Intent intent = new Intent();
+                intent.putExtra("total", Budget_view.getText());
+                setResult(RESULT_OK, intent);
+
             }
         });
 
@@ -51,6 +57,7 @@ public class BudgetTotal extends AppCompatActivity {
                 Budget_view.setVisibility(View.GONE);
                 Budget_write_btn.setVisibility(View.VISIBLE);
                 Budget_view_btn.setVisibility(View.GONE);
+
             }
         });
 

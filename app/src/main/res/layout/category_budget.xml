@@ -47,6 +47,12 @@
 
             android:text="월 카테고리 예산 설정"
             android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/bring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가져오기"/>
     </LinearLayout>
 
     <TextView
