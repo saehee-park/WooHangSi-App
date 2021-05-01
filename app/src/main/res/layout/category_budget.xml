@@ -546,7 +546,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="패션/쇼핑"
+                        android:text="패션"
                         android:textSize="20sp" />
 
                     <LinearLayout
