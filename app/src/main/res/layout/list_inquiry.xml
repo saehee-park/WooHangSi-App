@@ -22,7 +22,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/MonthPrev"
+                android:id="@+id/monthPrev"
                 android:layout_width="70dp"
                 android:layout_height="match_parent"
                 android:layout_marginRight="20dp"
@@ -34,7 +34,7 @@
                 android:textSize="40sp" />
 
             <TextView
-                android:id="@+id/Month"
+                android:id="@+id/month"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="4"
@@ -47,7 +47,7 @@
                 android:textSize="50sp" />
 
             <Button
-                android:id="@+id/MonthNext"
+                android:id="@+id/monthNext"
                 android:layout_width="70dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
@@ -168,7 +168,7 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="10dp">
                 <TextView
-                    android:id="@+id/Inquiry_Month"
+                    android:id="@+id/inquiry_month"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -179,7 +179,7 @@
                     android:textSize="20sp"
                     android:text="월 "/>
                 <TextView
-                    android:id="@+id/Inquiry_Day"
+                    android:id="@+id/inquiry_day"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -199,7 +199,7 @@
                 android:layout_marginBottom="10dp"
                 android:background="#CCCCCC" />
             <LinearLayout
-                android:id="@+id/Inquiry_image"
+                android:id="@+id/inquiry_image"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -217,7 +217,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/Inquiry_name"
+                        android:id="@+id/inquiry_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="맥도날드"
@@ -229,7 +229,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/Inquiry_Categoey"
+                            android:id="@+id/inquiry_category"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="식비"
@@ -241,7 +241,7 @@
                             android:textSize="15sp" />
 
                         <TextView
-                            android:id="@+id/Inquiry_account"
+                            android:id="@+id/inquiry_account"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="우리은행 계좌"
@@ -260,14 +260,14 @@
 
                     android:orientation="horizontal">
                     <TextView
-                        android:id="@+id/Inquiry_plus"
+                        android:id="@+id/inquiry_plus"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="\+"
                         android:textColor="#673AB7"
                         android:textSize="30sp" />
                     <TextView
-                        android:id="@+id/Inquiry_minus"
+                        android:id="@+id/inquiry_minus"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:visibility="gone"
@@ -275,7 +275,7 @@
                         android:textColor="#673AB7"
                         android:textSize="30sp" />
                     <TextView
-                        android:id="@+id/Inquiry_money"
+                        android:id="@+id/inquiry_money"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"
