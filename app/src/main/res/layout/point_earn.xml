@@ -144,7 +144,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/Inquiry_Year"
+                            android:id="@+id/Inquiry_year"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="2021"
@@ -157,7 +157,7 @@
                             android:textSize="10sp" />
 
                         <TextView
-                            android:id="@+id/Inquiry_Month"
+                            android:id="@+id/Inquiry_month"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="3"
@@ -168,7 +168,7 @@
                             android:text="."
                             android:textSize="10sp" />
                         <TextView
-                            android:id="@+id/Inquiry_Day"
+                            android:id="@+id/Inquiry_day"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="01"
