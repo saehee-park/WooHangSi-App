@@ -33,16 +33,16 @@ public class DrawerActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()){
-                    case R.id.menu_gallery:
+                    case R.id.Main:
                         Toast.makeText(com.example.woohangsi_app.DrawerActivity.this, "Gallery", Toast.LENGTH_SHORT).show();
                         break;
-                    case R.id.menu_send:
+                    case R.id.totalBudget_inquiry:
                         Toast.makeText(com.example.woohangsi_app.DrawerActivity.this, "Send", Toast.LENGTH_SHORT).show();
                         break;
-                    case R.id.menu_aa:
+                    case R.id.categoryBudget_inquiry:
                         Toast.makeText(com.example.woohangsi_app.DrawerActivity.this, "AA", Toast.LENGTH_SHORT).show();
                         break;
-                    case R.id.menu_bb:
+                    case R.id.brandBudget_inquiry:
                         Toast.makeText(com.example.woohangsi_app.DrawerActivity.this, "BB", Toast.LENGTH_SHORT).show();
                         break;
                 }

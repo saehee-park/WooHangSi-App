@@ -3,28 +3,28 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="160dp"
-    android:background="#006666">
+    android:background="#36673AB7">
 
     <ImageView
         android:id="@+id/iv_header"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@mipmap/ic_launcher"
-        android:layout_margin="8dp"/>
+        android:layout_width="141dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:src="@drawable/logo" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Android"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="#ffffff"
-        android:layout_marginLeft="8dp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="android@gmail.com"
-        android:textColor="#ffffff"
-        android:layout_marginLeft="8dp"/>
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="우행시"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textStyle="normal"-->
+<!--        android:textColor="#673AB7"-->
+<!--        android:layout_marginLeft="13dp"/>-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="android@gmail.com"-->
+<!--        android:textColor="#ffffff"-->
+<!--        android:layout_marginLeft="8dp"/>-->
 
 </LinearLayout>

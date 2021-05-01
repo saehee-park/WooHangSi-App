@@ -2,21 +2,42 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/menu_gallery"
-        android:title="Gallery"
+        android:id="@+id/Main"
+        android:title="메인 화면"
         android:icon="@android:drawable/ic_menu_gallery"/>
-    <item
-        android:id="@+id/menu_send"
-        android:title="Send"
-        android:icon="@android:drawable/ic_menu_send"/>
 
-    <item android:title="Your Accout">
+    <item android:title="예산 조회">
         <menu>
-            <item android:id="@+id/menu_aa"
-                android:title="3개월 분석"/>
-            <item android:id="@+id/menu_bb"
-                android:title="bb"/>
+            <item android:id="@+id/totalBudget_inquiry"
+                android:title="전체 예산"/>
+            <item android:id="@+id/categoryBudget_inquiry"
+                android:title="카테고리별"/>
+            <item android:id="@+id/brandBudget_inquiry"
+                android:title="브랜드별"/>
         </menu>
     </item>
-
+    <item android:title="예산 설정">
+        <menu>
+            <item android:id="@+id/totalBudget_set"
+                android:title="전체 예산"/>
+            <item android:id="@+id/categoryBudget_set"
+                android:title="카테고리별"/>
+            <item android:id="@+id/brandBudget_set"
+                android:title="브랜드별"/>
+        </menu>
+    </item>
+    <item android:title="개인 맞춤형 서비스">
+        <menu>
+            <item android:id="@+id/top3_analysis"
+                android:title="Top3 지출 분석"/>
+            <item android:id="@+id/month3_analysis"
+                android:title="3개월 지출 분석"/>
+            <item android:id="@+id/consumption_analysis"
+                android:title="소비 패턴 분석"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/MyPoint"
+        android:title="My Point"
+        android:icon="@android:drawable/ic_menu_gallery"/>
 </menu>

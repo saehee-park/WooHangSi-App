@@ -1,11 +1,14 @@
 package com.example.woohangsi_app;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class BudgetCategory extends AppCompatActivity {
@@ -20,6 +23,12 @@ public class BudgetCategory extends AppCompatActivity {
     EditText foodBudget, cafeBudget, alcholBudget, lifeBudget, shoppingBudget, fashionBudget, beautyBudget,
             trafficBudget, carBudget, houseBudget, healthBudget, capitalBudget, cultureBudget, travelBudget,
             educateBudget, childrenBudget, petBudget, presentBudget;
+
+    LinearLayout [] layoutarray;
+    String [] categoryArray;
+    boolean [] checkArray;
+
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,6 +96,35 @@ public class BudgetCategory extends AppCompatActivity {
         childrenBudget = (EditText) findViewById(R.id.childrenBudget);
         petBudget = (EditText) findViewById(R.id.petBudget);
         presentBudget = (EditText) findViewById(R.id.presentBudget);
+
+        layoutarray = new LinearLayout[] {food, cafe, alchol, life, shopping, fashion, beauty, traffic, car, house, health, capital, culture, travel, educate, children, pet, present};
+
+        categoryArray = new String[] {"식비", "카페", "술/유흥", "생활", "온라인 쇼핑", "패션", "뷰티", "교통", "자동차", "주거/통신", "의료/건강", "금융",
+                "문화/여가", "여행/숙박", "교육/학습", "자녀/육아", "반려동물", "경조/선물"};
+        checkArray = new boolean[]{false, false, false, false, false, false, false, false, false, false,
+                false, false, false, false, false, false, false, false};
+
+        btnSelect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder dlg = new AlertDialog.Builder(BudgetCategory.this);
+                dlg.setTitle("예산 설정을 원하는 카테고리를 선택");
+                dlg.setIcon(R.drawable.logo);
+                dlg.setMultiChoiceItems(categoryArray, checkArray, new DialogInterface.OnMultiChoiceClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int which, boolean isChecked) {
+                        if(checkArray[which]=isChecked){
+                            layoutarray[which].setVisibility(View.VISIBLE);
+                        }
+                        else{
+                            layoutarray[which].setVisibility(View.GONE);
+                        }
+                    }
+                });
+                dlg.setPositiveButton("완료", null);
+                dlg.show();
+            }
+        });
 
     }
 }

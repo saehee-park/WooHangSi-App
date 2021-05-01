@@ -241,7 +241,7 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    app:srcCompat="@drawable/food" />
+                    app:srcCompat="@drawable/car" />
 
                 <TextView
                     android:layout_width="211dp"
@@ -267,7 +267,7 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    app:srcCompat="@drawable/food" />
+                    app:srcCompat="@drawable/house" />
 
                 <TextView
                     android:layout_width="211dp"
@@ -293,7 +293,7 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    app:srcCompat="@drawable/food" />
+                    app:srcCompat="@drawable/health" />
 
                 <TextView
                     android:layout_width="211dp"
@@ -319,7 +319,7 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    app:srcCompat="@drawable/food" />
+                    app:srcCompat="@drawable/capital" />
 
                 <TextView
                     android:layout_width="211dp"
@@ -345,7 +345,7 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    app:srcCompat="@drawable/food" />
+                    app:srcCompat="@drawable/culture" />
 
                 <TextView
                     android:layout_width="211dp"
@@ -371,7 +371,7 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    app:srcCompat="@drawable/food" />
+                    app:srcCompat="@drawable/travel" />
 
                 <TextView
                     android:layout_width="211dp"
@@ -397,7 +397,7 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    app:srcCompat="@drawable/food" />
+                    app:srcCompat="@drawable/educate" />
 
                 <TextView
                     android:layout_width="211dp"
@@ -423,7 +423,7 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    app:srcCompat="@drawable/food" />
+                    app:srcCompat="@drawable/children" />
 
                 <TextView
                     android:layout_width="211dp"
@@ -449,7 +449,7 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    app:srcCompat="@drawable/food" />
+                    app:srcCompat="@drawable/pet" />
 
                 <TextView
                     android:layout_width="211dp"
@@ -475,7 +475,7 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    app:srcCompat="@drawable/food" />
+                    app:srcCompat="@drawable/present" />
 
                 <TextView
                     android:layout_width="211dp"

@@ -23,6 +23,347 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+<!--        <TableLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="50dp"-->
+<!--            android:layout_weight="1">-->
+
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:background="@drawable/background1"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/top1"-->
+<!--                            android:layout_width="100dp"-->
+<!--                            android:layout_height="100dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            app:srcCompat="@drawable/starbucks" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/txttop1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginRight="0.9dp"-->
+<!--                        android:background="#E7F6FD"-->
+<!--                        android:gravity="center_horizontal"-->
+<!--                        android:text="스타벅스"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textSize="18sp" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:background="@drawable/background1"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/top1"-->
+<!--                            android:layout_width="80dp"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            app:srcCompat="@drawable/twosomeplace" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/txttop1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginRight="0.9dp"-->
+<!--                        android:background="#E7F6FD"-->
+<!--                        android:gravity="center_horizontal"-->
+<!--                        android:text="투썸플레이스"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textSize="18sp" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:background="@drawable/background1"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/top1"-->
+<!--                            android:layout_width="80dp"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            app:srcCompat="@drawable/ediya" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/txttop1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginRight="0.9dp"-->
+<!--                        android:background="#E7F6FD"-->
+<!--                        android:gravity="center_horizontal"-->
+<!--                        android:text="이디야커피"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textSize="18sp" />-->
+
+<!--                </LinearLayout>-->
+<!--            </TableRow>-->
+
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:background="@drawable/background1"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/top1"-->
+<!--                            android:layout_width="80dp"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            app:srcCompat="@drawable/gongcha" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/txttop1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginRight="0.9dp"-->
+<!--                        android:background="#E7F6FD"-->
+<!--                        android:gravity="center_horizontal"-->
+<!--                        android:text="공차"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textSize="18sp" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:background="@drawable/background1"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/top1"-->
+<!--                            android:layout_width="80dp"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            app:srcCompat="@drawable/paik" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/txttop1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginRight="0.9dp"-->
+<!--                        android:background="#E7F6FD"-->
+<!--                        android:gravity="center_horizontal"-->
+<!--                        android:text="빽다방"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textSize="18sp" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:background="@drawable/background1"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/top1"-->
+<!--                            android:layout_width="80dp"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            app:srcCompat="@drawable/sulbing" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/txttop1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginRight="0.9dp"-->
+<!--                        android:background="#E7F6FD"-->
+<!--                        android:gravity="center_horizontal"-->
+<!--                        android:text="설빙"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textSize="18sp" />-->
+
+<!--                </LinearLayout>-->
+<!--            </TableRow>-->
+
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:background="@drawable/background1"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/top1"-->
+<!--                            android:layout_width="80dp"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            app:srcCompat="@drawable/hollys" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/txttop1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginRight="0.9dp"-->
+<!--                        android:background="#E7F6FD"-->
+<!--                        android:gravity="center_horizontal"-->
+<!--                        android:text="할리스"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textSize="18sp" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:background="@drawable/background1"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/top1"-->
+<!--                            android:layout_width="80dp"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            app:srcCompat="@drawable/pascucci" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/txttop1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginRight="0.9dp"-->
+<!--                        android:background="#E7F6FD"-->
+<!--                        android:gravity="center_horizontal"-->
+<!--                        android:text="파스쿠찌"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textSize="18sp" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:background="@drawable/background1"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/top1"-->
+<!--                            android:layout_width="80dp"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            app:srcCompat="@drawable/paulbessett" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/txttop1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginRight="0.9dp"-->
+<!--                        android:background="#E7F6FD"-->
+<!--                        android:gravity="center_horizontal"-->
+<!--                        android:text="폴 바셋"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textSize="18sp" />-->
+
+<!--                </LinearLayout>-->
+<!--            </TableRow>-->
+
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="112dp">-->
+<!--                <Button-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="#00FFFFFF"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="right"-->
+<!--                    android:text="다음 >"-->
+<!--                    android:textColor="#000000" />-->
+<!--            </TableRow>-->
+<!--        </TableLayout>-->
         <TableLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,7 +392,7 @@
                             android:layout_height="80dp"
                             android:layout_gravity="center"
                             android:layout_marginTop="8dp"
-                            app:srcCompat="@drawable/traffic" />
+                            app:srcCompat="@drawable/baskinrobbins" />
                     </LinearLayout>
 
                     <TextView
@@ -61,7 +402,7 @@
                         android:layout_marginRight="0.9dp"
                         android:background="#E7F6FD"
                         android:gravity="center_horizontal"
-                        android:text="교통"
+                        android:text="베스킨라빈스"
                         android:textAlignment="center"
                         android:textSize="18sp" />
 
@@ -85,7 +426,7 @@
                             android:layout_height="80dp"
                             android:layout_gravity="center"
                             android:layout_marginTop="8dp"
-                            app:srcCompat="@drawable/traffic" />
+                            app:srcCompat="@drawable/tomntoms" />
                     </LinearLayout>
 
                     <TextView
@@ -95,7 +436,7 @@
                         android:layout_marginRight="0.9dp"
                         android:background="#E7F6FD"
                         android:gravity="center_horizontal"
-                        android:text="교통"
+                        android:text="탐앤탐스"
                         android:textAlignment="center"
                         android:textSize="18sp" />
 
@@ -119,7 +460,7 @@
                             android:layout_height="80dp"
                             android:layout_gravity="center"
                             android:layout_marginTop="8dp"
-                            app:srcCompat="@drawable/traffic" />
+                            app:srcCompat="@drawable/plus" />
                     </LinearLayout>
 
                     <TextView
@@ -129,114 +470,7 @@
                         android:layout_marginRight="0.9dp"
                         android:background="#E7F6FD"
                         android:gravity="center_horizontal"
-                        android:text="교통"
-                        android:textAlignment="center"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:background="@drawable/background1"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/top1"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="8dp"
-                            app:srcCompat="@drawable/traffic" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/txttop1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="0.9dp"
-                        android:background="#E7F6FD"
-                        android:gravity="center_horizontal"
-                        android:text="교통"
-                        android:textAlignment="center"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:background="@drawable/background1"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/top1"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="8dp"
-                            app:srcCompat="@drawable/traffic" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/txttop1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="0.9dp"
-                        android:background="#E7F6FD"
-                        android:gravity="center_horizontal"
-                        android:text="교통"
-                        android:textAlignment="center"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:background="@drawable/background1"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/top1"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="8dp"
-                            app:srcCompat="@drawable/traffic" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/txttop1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="0.9dp"
-                        android:background="#E7F6FD"
-                        android:gravity="center_horizontal"
-                        android:text="교통"
+                        android:text="직접 추가"
                         android:textAlignment="center"
                         android:textSize="18sp" />
 
@@ -265,7 +499,7 @@
                             android:layout_height="80dp"
                             android:layout_gravity="center"
                             android:layout_marginTop="8dp"
-                            app:srcCompat="@drawable/traffic" />
+                            app:srcCompat="@drawable/plus" />
                     </LinearLayout>
 
                     <TextView
@@ -275,7 +509,7 @@
                         android:layout_marginRight="0.9dp"
                         android:background="#E7F6FD"
                         android:gravity="center_horizontal"
-                        android:text="교통"
+                        android:text="직접 추가"
                         android:textAlignment="center"
                         android:textSize="18sp" />
 
@@ -299,7 +533,7 @@
                             android:layout_height="80dp"
                             android:layout_gravity="center"
                             android:layout_marginTop="8dp"
-                            app:srcCompat="@drawable/traffic" />
+                            app:srcCompat="@drawable/plus" />
                     </LinearLayout>
 
                     <TextView
@@ -309,7 +543,7 @@
                         android:layout_marginRight="0.9dp"
                         android:background="#E7F6FD"
                         android:gravity="center_horizontal"
-                        android:text="교통"
+                        android:text="직접 추가"
                         android:textAlignment="center"
                         android:textSize="18sp" />
 
@@ -333,7 +567,7 @@
                             android:layout_height="80dp"
                             android:layout_gravity="center"
                             android:layout_marginTop="8dp"
-                            app:srcCompat="@drawable/traffic" />
+                            app:srcCompat="@drawable/plus" />
                     </LinearLayout>
 
                     <TextView
@@ -343,134 +577,7 @@
                         android:layout_marginRight="0.9dp"
                         android:background="#E7F6FD"
                         android:gravity="center_horizontal"
-                        android:text="교통"
-                        android:textAlignment="center"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="112dp">
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#00FFFFFF"
-                    android:layout_weight="1"
-                    android:gravity="right"
-                    android:text="다음 >"
-                    android:textColor="#000000" />
-            </TableRow>
-        </TableLayout>
-        <TableLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_weight="1">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:background="@drawable/background1"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/top1"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="8dp"
-                            app:srcCompat="@drawable/traffic" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/txttop1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="0.9dp"
-                        android:background="#E7F6FD"
-                        android:gravity="center_horizontal"
-                        android:text="교통"
-                        android:textAlignment="center"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:background="@drawable/background1"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/top1"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="8dp"
-                            app:srcCompat="@drawable/traffic" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/txttop1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="0.9dp"
-                        android:background="#E7F6FD"
-                        android:gravity="center_horizontal"
-                        android:text="교통"
-                        android:textAlignment="center"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:background="@drawable/background1"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/top1"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="8dp"
-                            app:srcCompat="@drawable/traffic" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/txttop1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="0.9dp"
-                        android:background="#E7F6FD"
-                        android:gravity="center_horizontal"
-                        android:text="교통"
+                        android:text="직접 추가"
                         android:textAlignment="center"
                         android:textSize="18sp" />
 
@@ -499,7 +606,7 @@
                             android:layout_height="80dp"
                             android:layout_gravity="center"
                             android:layout_marginTop="8dp"
-                            app:srcCompat="@drawable/traffic" />
+                            app:srcCompat="@drawable/plus" />
                     </LinearLayout>
 
                     <TextView
@@ -509,7 +616,7 @@
                         android:layout_marginRight="0.9dp"
                         android:background="#E7F6FD"
                         android:gravity="center_horizontal"
-                        android:text="교통"
+                        android:text="직접 추가"
                         android:textAlignment="center"
                         android:textSize="18sp" />
 
@@ -533,7 +640,7 @@
                             android:layout_height="80dp"
                             android:layout_gravity="center"
                             android:layout_marginTop="8dp"
-                            app:srcCompat="@drawable/traffic" />
+                            app:srcCompat="@drawable/plus" />
                     </LinearLayout>
 
                     <TextView
@@ -543,7 +650,7 @@
                         android:layout_marginRight="0.9dp"
                         android:background="#E7F6FD"
                         android:gravity="center_horizontal"
-                        android:text="교통"
+                        android:text="직접 추가"
                         android:textAlignment="center"
                         android:textSize="18sp" />
 
@@ -567,114 +674,7 @@
                             android:layout_height="80dp"
                             android:layout_gravity="center"
                             android:layout_marginTop="8dp"
-                            app:srcCompat="@drawable/traffic" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/txttop1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="0.9dp"
-                        android:background="#E7F6FD"
-                        android:gravity="center_horizontal"
-                        android:text="교통"
-                        android:textAlignment="center"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:background="@drawable/background1"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/top1"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="8dp"
-                            app:srcCompat="@drawable/traffic" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/txttop1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="0.9dp"
-                        android:background="#E7F6FD"
-                        android:gravity="center_horizontal"
-                        android:text="교통"
-                        android:textAlignment="center"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:background="@drawable/background1"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/top1"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="8dp"
-                            app:srcCompat="@drawable/traffic" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/txttop1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="0.9dp"
-                        android:background="#E7F6FD"
-                        android:gravity="center_horizontal"
-                        android:text="교통"
-                        android:textAlignment="center"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:background="@drawable/background1"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/top1"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="8dp"
-                            app:srcCompat="@drawable/ic_launcher_background" />
+                            app:srcCompat="@drawable/plus" />
                     </LinearLayout>
 
                     <TextView
