@@ -34,6 +34,7 @@ public class BudgetTotal extends AppCompatActivity {
         btnCancel = (Button)findViewById(R.id.btnCancel);
         btnEdit = (Button)findViewById(R.id.btnEdit);
 
+
         btnApply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,7 +47,6 @@ public class BudgetTotal extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.putExtra("total", Budget_view.getText());
                 setResult(RESULT_OK, intent);
-
             }
         });
 

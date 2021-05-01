@@ -10,19 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WooHangSiApp">
 
-        <activity android:name=".BrandCustom">
+        <activity android:name=".BudgetMonthly">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SelfAddBudgetCustom"/>
         <activity
             android:name=".ResultActivity"
             android:parentActivityName=".MainActivity" >
         </activity>
         <activity android:name=".BudgetTotal"/>
+        <activity android:name=".SelfAddBudgetCustom"/>
+        <activity android:name=".SpendThreeMonth"/>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

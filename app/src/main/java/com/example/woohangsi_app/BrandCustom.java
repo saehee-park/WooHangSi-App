@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class BrandCustom extends AppCompatActivity {
     public static final int REQUEST_CODE_MENU=101;
+
     ViewFlipper vFlipper;
 
     ImageView starbucks_img, twosome_img, ediya_img, gongcha_img, backdabang_img, sulbing_img, pascucci_img, polbaset_img, baskin_img, tomtom_img, self1_img, self2_img,
@@ -66,19 +67,6 @@ public class BrandCustom extends AppCompatActivity {
             });
         }
 
-        for (i = 0; i < self_img.length; i++) {
-            final int index;
-            index = i;
-
-            self_img[index].setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(getApplicationContext(), SelfAddBudgetCustom.class);
-                        startActivityForResult(intent, REQUEST_CODE_MENU);
-                }
-            });
-
-        }
         nextBtn = (Button) findViewById(R.id.nextBtn);
         prevBtn = (Button) findViewById(R.id.prevBtn);
 
@@ -94,14 +82,25 @@ public class BrandCustom extends AppCompatActivity {
                 vFlipper.showPrevious();
             }
         });
+
+        for (i = 0; i < self_img.length; i++) {
+            self_img[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getApplicationContext(), SelfAddBudgetCustom.class);
+                    startActivityForResult(intent, REQUEST_CODE_MENU);
+                }
+            });
+        }
     }
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
 
+        super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_CODE_MENU) {
             if (resultCode == RESULT_OK) {
-                String total = data.getStringExtra("total");
-                self2.setText(total);
+                String name = data.getStringExtra("name");
+                self1.setText(name);
+
             }
         }
 

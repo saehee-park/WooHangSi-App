@@ -140,18 +140,15 @@ public class BudgetCategory extends AppCompatActivity {
             }
         });
 
+
+
     }
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == REQUEST_CODE_MENU) {
-            Toast.makeText(getApplicationContext(),
-                    "onActivityResult 메소드 호출됨. 요청 코드 : " + requestCode +
-                            ", 결과 코드 : " + resultCode, Toast.LENGTH_LONG).show();
             if (resultCode == RESULT_OK) {
                 String total = data.getStringExtra("total");
-                Toast.makeText(getApplicationContext(), "응답으로 전달된 name : " + total,
-                        Toast.LENGTH_LONG).show();
                 Budget.setText(total);
             }
         }

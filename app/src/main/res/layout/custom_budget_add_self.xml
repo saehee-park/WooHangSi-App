@@ -26,10 +26,10 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:hint="브랜드를 입력하세요."
         android:textAlignment="center"
-        android:textSize="35sp" />
+        android:textSize="30sp" />
 <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -43,10 +43,10 @@
         android:id="@+id/brand_self_budget"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-
         android:hint="0"
         android:textColor="#673AB7"
         android:textSize="40dp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
