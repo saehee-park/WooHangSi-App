@@ -15,6 +15,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.woohangsi_app.DB.FixedSpending;
+import com.example.woohangsi_app.DB.RequestAPI;
 import com.example.woohangsi_app.requests.Body;
 import com.example.woohangsi_app.requests.CallAPI;
 import com.example.woohangsi_app.requests.Urls;
@@ -28,6 +30,9 @@ public class CheckApi extends AppCompatActivity {
     Button btnGetIndivAllAccInfo, btnGetAccBasicInfo, btnGetAccTransList, btnGetCellCerti, btnExecuteCellCerti;
     String data;
     TextView textView;
+
+    Button postBtn, putBtn, deleteBtn;
+    RequestAPI requestAPI;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +52,7 @@ public class CheckApi extends AppCompatActivity {
 
         textView = (TextView)findViewById(R.id.textView2);
 
-        // api 버튼
+        // request 버튼
         Urls urls = new Urls();
         Body body = new Body();
 
@@ -88,6 +93,64 @@ public class CheckApi extends AppCompatActivity {
             }
         });
 
+
+        // DB 버튼
+        try {
+            requestAPI = new RequestAPI();
+        } catch (IOException e) {
+            e.printStackTrace();
+            finish();
+        }
+        postBtn = (Button)findViewById(R.id.post);
+        postBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Thread() {
+                    public void run() {
+                        try {
+                            FixedSpending fixedSpending = new FixedSpending();
+                            requestAPI.requestPost(fixedSpending.getAddUrl(),fixedSpending.getAddBody("교통비",100000,1));
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }.start();
+            }
+        });
+
+        putBtn = (Button)findViewById(R.id.put);
+        putBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Thread() {
+                    public void run() {
+                        try {
+                            FixedSpending fixedSpending = new FixedSpending();
+                            requestAPI.requestPut(fixedSpending.getUpdateUrl(),fixedSpending.getUpdateBody("월급",6000000, 1));
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }.start();
+            }
+        });
+
+        deleteBtn = (Button)findViewById(R.id.delete);
+        deleteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Thread() {
+                    public void run() {
+                        try {
+                            FixedSpending fixedSpending = new FixedSpending();
+                            requestAPI.requestDelete(fixedSpending.getDeleteUrl(),fixedSpending.getDeleteBody(1));
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }.start();
+            }
+        });
     }
 
     public void NotificationSomethings() {
