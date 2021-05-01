@@ -55,6 +55,7 @@
 
 
                 <TextView
+                    android:id="@+id/txtMonth1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2"
@@ -79,6 +80,7 @@
                 android:gravity="right">
 
                 <TextView
+                    android:id="@+id/Month1_money"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="100,000,000"
@@ -111,6 +113,7 @@
 
 
                 <TextView
+                    android:id="@+id/txtMonth2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="3"
@@ -136,6 +139,7 @@
                 android:gravity="right">
 
                 <TextView
+                    android:id="@+id/Month1_money"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="100,000,000"
@@ -192,6 +196,7 @@
                 android:gravity="center">
 
                 <TextView
+                    android:id="@+id/txtMonth3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="4"
@@ -215,6 +220,7 @@
                 android:gravity="right">
 
                 <TextView
+                    android:id="@+id/Month1_money"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="100,000,000"
@@ -228,11 +234,7 @@
                     android:text="원"
                     android:textColor="#673AB7"
                     android:textSize="30sp" />
-
             </LinearLayout>
-
-
         </LinearLayout>
-
     </LinearLayout>
 </LinearLayout>

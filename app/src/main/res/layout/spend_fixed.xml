@@ -35,6 +35,7 @@
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/txtMonth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="5"
@@ -81,6 +82,7 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/spend_img"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_gravity="center"
@@ -97,6 +99,7 @@
 
 
                     <TextView
+                        android:id="@+id/spend_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="교통"
@@ -108,6 +111,7 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/spend_money"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="100000"
@@ -121,15 +125,8 @@
                             android:textColor="#673AB7"
                             android:textSize="30sp" />
                     </LinearLayout>
-
-
                 </LinearLayout>
-
-
-
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-
-
 </LinearLayout>

@@ -55,9 +55,9 @@
             android:textSize="30sp" />
     </LinearLayout>
 
-    <!-- 초기 예산-->
+
     <EditText
-        android:id="@+id/beginBudget_write"
+        android:id="@+id/Budget_write"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -67,7 +67,7 @@
         android:textSize="40sp" />
 
     <TextView
-        android:id="@+id/beginBudget"
+        android:id="@+id/Budget_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -81,9 +81,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="203dp"
         android:visibility="visible"
+        android:id="@+id/Budget_write_btn"
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnApply"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="30dp"
@@ -93,6 +95,7 @@
             android:textSize="25sp" />
 
         <Button
+            android:id="@+id/btnCancel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
@@ -107,9 +110,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="203dp"
         android:visibility="gone"
+        android:id="@+id/Budget_view_btn"
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnCancel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="30dp"
