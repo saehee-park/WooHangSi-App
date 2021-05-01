@@ -1,6 +1,7 @@
 package com.example.woohangsi_app;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -31,6 +32,34 @@ public class BudgetTotal extends AppCompatActivity {
         btnApply = (Button)findViewById(R.id.btnApply);
         btnCancel = (Button)findViewById(R.id.btnCancel);
         btnEdit = (Button)findViewById(R.id.btnEdit);
+
+        btnApply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Budget_view.setText(Budget_write.getText().toString());
+                Budget_write.setVisibility(View.GONE);
+                Budget_view.setVisibility(View.VISIBLE);
+                Budget_write_btn.setVisibility(View.GONE);
+                Budget_view_btn.setVisibility(View.VISIBLE);
+            }
+        });
+
+        btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Budget_write.setVisibility(View.VISIBLE);
+                Budget_view.setVisibility(View.GONE);
+                Budget_write_btn.setVisibility(View.VISIBLE);
+                Budget_view_btn.setVisibility(View.GONE);
+            }
+        });
+
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Budget_write.getText().clear();
+            }
+        });
     }
 
 }

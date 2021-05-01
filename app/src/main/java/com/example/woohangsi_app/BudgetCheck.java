@@ -1,5 +1,6 @@
 package com.example.woohangsi_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -34,5 +35,27 @@ public class BudgetCheck extends AppCompatActivity {
         back_btn = (Button) findViewById(R.id.back_btn);
 
         divider = (View) findViewById(R.id.divider);
+
+        getPoint_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), EarnPoint.class);
+                startActivity(intent);
+            }
+        });
+
+        detail_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                vFlipper.showNext();
+            }
+        });
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                vFlipper.showPrevious();
+            }
+        });
     }
 }
