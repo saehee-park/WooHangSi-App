@@ -26,7 +26,6 @@
         <activity android:name=".BudgetCheck"/>
         <activity android:name=".BudgetMonthly"/>
         <activity android:name=".BudgetTotal"/>
-        <activity android:name=".BudgetTotalEdit"/>
         <activity android:name=".CategoryCustom"/>
         <activity android:name=".CheckApi"/>
         <activity android:name=".ConsumptionPattern"/>

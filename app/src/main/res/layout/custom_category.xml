@@ -26,7 +26,7 @@
         <TableLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:layout_weight="1">
 
             <TableRow
@@ -352,22 +352,21 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="112dp">
+                android:layout_height="wrap_content">
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#00FFFFFF"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="다음 "
+                    android:text="다음 &gt;"
                     android:textColor="#000000" />
             </TableRow>
         </TableLayout>
         <TableLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:layout_weight="1">
 
             <TableRow
@@ -692,15 +691,14 @@
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="112dp">
+                android:layout_height="wrap_content">
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#00FFFFFF"
                     android:layout_weight="1"
                     android:gravity="left"
-                    android:text="이전"
+                    android:text="&lt; 이전"
                     android:textColor="#000000" />
             </TableRow>
         </TableLayout>
