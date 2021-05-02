@@ -138,21 +138,6 @@
             android:layout_centerHorizontal="true"
             android:layout_marginRight="80dp" />
 
-        <ImageButton
-            android:id="@+id/find_imageButton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:backgroundTint="@color/white"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/search" />
-
-        <ImageButton
-            android:id="@+id/add_imageButton"
-            android:layout_width="74dp"
-            android:layout_height="50dp"
-            android:backgroundTint="@color/white"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/plus" />
     </LinearLayout>
 
     <ScrollView

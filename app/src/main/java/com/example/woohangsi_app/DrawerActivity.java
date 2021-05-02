@@ -1,5 +1,6 @@
 package com.example.woohangsi_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -34,16 +35,50 @@ public class DrawerActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()){
                     case R.id.Main:
-                        Toast.makeText(com.example.woohangsi_app.DrawerActivity.this, "Gallery", Toast.LENGTH_SHORT).show();
+                        Intent intent=new Intent(com.example.woohangsi_app.DrawerActivity.this,MainActivity.class);
+                        startActivity(intent);
                         break;
                     case R.id.totalBudget_inquiry:
-                        Toast.makeText(com.example.woohangsi_app.DrawerActivity.this, "Send", Toast.LENGTH_SHORT).show();
+                        intent = new Intent(DrawerActivity.this, InquiryBudgetTotal.class);
+                        startActivity(intent);
                         break;
                     case R.id.categoryBudget_inquiry:
-                        Toast.makeText(com.example.woohangsi_app.DrawerActivity.this, "AA", Toast.LENGTH_SHORT).show();
+                        intent = new Intent(DrawerActivity.this, InquiryBudgetCategory.class);
+                        startActivity(intent);
                         break;
                     case R.id.brandBudget_inquiry:
-                        Toast.makeText(com.example.woohangsi_app.DrawerActivity.this, "BB", Toast.LENGTH_SHORT).show();
+                        intent = new Intent(DrawerActivity.this, InquiryBudgetCustom.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.totalBudget_set:
+                        intent = new Intent(DrawerActivity.this, BudgetTotal.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.categoryBudget_set:
+                        intent = new Intent(DrawerActivity.this, BudgetCategory.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.brandBudget_set:
+                        intent = new Intent(DrawerActivity.this, CategoryCustom.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.top3_analysis:
+                        intent = new Intent(DrawerActivity.this, TopCategory.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.month3_analysis:
+                        intent = new Intent(DrawerActivity.this, SpendThreeMonth.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.consumption_analysis:
+                        intent = new Intent(DrawerActivity.this, ConsumptionPattern.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.MyPoint:
+                        intent = new Intent(DrawerActivity.this, EarnPoint.class);
+                        startActivity(intent);
+                        break;
+                    default:
                         break;
                 }
 
@@ -66,11 +101,8 @@ public class DrawerActivity extends AppCompatActivity {
         //삼선 아이콘과 화살표아이콘이 자동으로 변환하도록
         drawerLayout.addDrawerListener(barDrawerToggle);
 
-    }//onCreate method..
+    }
 
-    //액션바의 메뉴를 클릭하는 이벤트를 듣는
-    //메소드를 통해서 클릭 상황을 전달하도록..
-    //토글 버튼이 클릭 상황을 인지하도록..
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         barDrawerToggle.onOptionsItemSelected(item);

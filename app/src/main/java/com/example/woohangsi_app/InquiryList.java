@@ -20,7 +20,6 @@ public class InquiryList extends Fragment {
     TextView month, income, payment, inquiry_month, inquiry_day, inquiry_name, inquiry_category,
             inquiry_account, inquiry_plus, inquiry_minus, inquiry_money;
     LinearLayout inquiry_image;
-    ImageButton find_imageButton, add_imageButton;
     Spinner spinner;
     View divider3, divider4;
 
@@ -43,9 +42,6 @@ public class InquiryList extends Fragment {
         inquiry_money = (TextView)view.findViewById(R.id.inquiry_money);
 
         inquiry_image = (LinearLayout)view.findViewById(R.id.inquiry_image);
-
-        find_imageButton = (ImageButton)view.findViewById(R.id.find_imageButton);
-        add_imageButton = (ImageButton)view.findViewById(R.id.add_imageButton);
 
         spinner = (Spinner) view.findViewById(R.id.spinner);
 
