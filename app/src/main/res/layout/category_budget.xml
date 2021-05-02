@@ -55,14 +55,6 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/bring"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="전체 예산 가져오기"
-            android:textColor="#000000"
-            app:backgroundTint="#FFFFFF" />
-
         <TextView
             android:id="@+id/Budget"
             android:layout_width="match_parent"

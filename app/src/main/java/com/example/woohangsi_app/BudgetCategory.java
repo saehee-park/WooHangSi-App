@@ -28,7 +28,7 @@ public class BudgetCategory extends AppCompatActivity {
             lifeLastCost, shoppingLastCost, fashionLastCost, beautyLastCost, trafficLastCost, carLastCost,
             houseLastCost, healthLastCost, capitalLastCost, cultureLastCost, travelLastCost, educateLastCost,
             childrenLastCost, petLastCost, presentLastCost;
-    Button btnSelect, bring;
+    Button btnSelect;
     LinearLayout food, cafe, alchol, life, shopping, fashion, beauty, traffic, car, house, health, capital,
             culture, travel, educate, children, pet, present;
     EditText foodBudget, cafeBudget, alcholBudget, lifeBudget, shoppingBudget, fashionBudget, beautyBudget,
@@ -98,7 +98,11 @@ public class BudgetCategory extends AppCompatActivity {
                         intent = new Intent(BudgetCategory.this, ConsumptionPattern.class);
                         startActivity(intent);
                         break;
-                    case R.id.MyPoint:
+                    case R.id.point_add:
+                        intent = new Intent(BudgetCategory.this, BudgetCheck.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.point_inquiry:
                         intent = new Intent(BudgetCategory.this, EarnPoint.class);
                         startActivity(intent);
                         break;
@@ -138,7 +142,6 @@ public class BudgetCategory extends AppCompatActivity {
         presentLastCost = (TextView) findViewById(R.id.presentLastCost);
 
         btnSelect = (Button) findViewById(R.id.btnSelect);
-        bring = (Button)findViewById(R.id.bring);
 
         food = (LinearLayout) findViewById(R.id.food);
         cafe = (LinearLayout) findViewById(R.id.cafe);
@@ -206,17 +209,6 @@ public class BudgetCategory extends AppCompatActivity {
                 dlg.show();
             }
         });
-
-        bring.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), BudgetTotal.class);
-                startActivityForResult(intent, REQUEST_CODE_MENU);
-            }
-        });
-
-
-
     }
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -228,7 +220,6 @@ public class BudgetCategory extends AppCompatActivity {
                 leftBudget.setText(Budget.getText());
             }
         }
-
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

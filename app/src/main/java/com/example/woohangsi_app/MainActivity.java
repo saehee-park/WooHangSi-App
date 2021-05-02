@@ -82,10 +82,15 @@ public class MainActivity extends AppCompatActivity {
             intent = new Intent(MainActivity.this, ConsumptionPattern.class);
             startActivity(intent);
             break;
-          case R.id.MyPoint:
+          case R.id.point_add:
+            intent = new Intent(MainActivity.this, BudgetCheck.class);
+            startActivity(intent);
+            break;
+          case R.id.point_inquiry:
             intent = new Intent(MainActivity.this, EarnPoint.class);
             startActivity(intent);
             break;
+
           default:
             break;
         }
