@@ -14,7 +14,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -208,13 +208,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginBottom="10dp"
                 android:orientation="horizontal">
 
@@ -242,7 +242,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -324,6 +324,7 @@
                         android:textSize="30sp" />
 
                     <CheckBox
+                        android:id="@+id/top1check"
                         android:layout_width="25dp"
                         android:layout_height="30dp"
                         android:layout_gravity="center"
@@ -335,7 +336,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -417,6 +418,7 @@
                         android:textSize="30sp" />
 
                     <CheckBox
+                        android:id="@+id/top2check"
                         android:layout_width="25dp"
                         android:layout_height="30dp"
                         android:layout_gravity="center"
@@ -428,7 +430,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -510,6 +512,7 @@
                         android:textSize="30sp" />
 
                     <CheckBox
+                        android:id="@+id/top3check"
                         android:layout_width="25dp"
                         android:layout_height="30dp"
                         android:layout_gravity="center"
@@ -523,7 +526,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:text="예산안 적용하기"
                 android:textSize="18sp" />
 

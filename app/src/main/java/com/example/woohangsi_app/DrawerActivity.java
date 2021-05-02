@@ -1,5 +1,6 @@
 package com.example.woohangsi_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -33,17 +34,51 @@ public class DrawerActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()){
-                    case R.id.menu_gallery:
-                        Toast.makeText(com.example.woohangsi_app.DrawerActivity.this, "Gallery", Toast.LENGTH_SHORT).show();
+                    case R.id.Main:
+                        Intent intent=new Intent(com.example.woohangsi_app.DrawerActivity.this,MainActivity.class);
+                        startActivity(intent);
                         break;
-                    case R.id.menu_send:
-                        Toast.makeText(com.example.woohangsi_app.DrawerActivity.this, "Send", Toast.LENGTH_SHORT).show();
+                    case R.id.totalBudget_inquiry:
+                        intent = new Intent(DrawerActivity.this, InquiryBudgetTotal.class);
+                        startActivity(intent);
                         break;
-                    case R.id.menu_aa:
-                        Toast.makeText(com.example.woohangsi_app.DrawerActivity.this, "AA", Toast.LENGTH_SHORT).show();
+                    case R.id.categoryBudget_inquiry:
+                        intent = new Intent(DrawerActivity.this, InquiryBudgetCategory.class);
+                        startActivity(intent);
                         break;
-                    case R.id.menu_bb:
-                        Toast.makeText(com.example.woohangsi_app.DrawerActivity.this, "BB", Toast.LENGTH_SHORT).show();
+                    case R.id.brandBudget_inquiry:
+                        intent = new Intent(DrawerActivity.this, InquiryBudgetCustom.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.totalBudget_set:
+                        intent = new Intent(DrawerActivity.this, BudgetTotal.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.categoryBudget_set:
+                        intent = new Intent(DrawerActivity.this, BudgetCategory.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.brandBudget_set:
+                        intent = new Intent(DrawerActivity.this, CategoryCustom.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.top3_analysis:
+                        intent = new Intent(DrawerActivity.this, TopCategory.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.month3_analysis:
+                        intent = new Intent(DrawerActivity.this, SpendThreeMonth.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.consumption_analysis:
+                        intent = new Intent(DrawerActivity.this, ConsumptionPattern.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.MyPoint:
+                        intent = new Intent(DrawerActivity.this, EarnPoint.class);
+                        startActivity(intent);
+                        break;
+                    default:
                         break;
                 }
 

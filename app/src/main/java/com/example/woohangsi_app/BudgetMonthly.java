@@ -1,6 +1,8 @@
 package com.example.woohangsi_app;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -19,6 +21,15 @@ public class BudgetMonthly extends AppCompatActivity {
         threemonth_budget = (TextView)findViewById(R.id.threemonth_budget);
 
         detail_btn = (Button) findViewById(R.id.detail_btn);
+
+        detail_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), SpendThreeMonth.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 }

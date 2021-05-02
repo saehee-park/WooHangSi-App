@@ -30,16 +30,30 @@
         android:text="스타벅스"
         android:textSize="35sp"/>
 
-    <EditText
-        android:id="@+id/brand_budget"
-        android:layout_width="300dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:gravity="center_horizontal"
         android:layout_gravity="center"
         android:textAlignment="center"
-        android:textColor="#673AB7"
-        android:textSize="40dp" />
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/brand_budget"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:textColor="#673AB7"
+            android:textSize="40dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="원"
+            android:textColor="#673AB7"
+            android:textSize="50sp"/>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

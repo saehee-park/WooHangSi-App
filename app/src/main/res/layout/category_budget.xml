@@ -44,10 +44,18 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:text="월 카테고리 예산 설정"
             android:textSize="30sp" />
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/bring"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="전체 예산 가져오기"
+        android:textColor="#000000"
+        app:backgroundTint="#FFFFFF" />
 
     <TextView
         android:id="@+id/Budget"
@@ -546,7 +554,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="패션/쇼핑"
+                        android:text="패션"
                         android:textSize="20sp" />
 
                     <LinearLayout
@@ -578,7 +586,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="170dp"
+                    android:layout_width="203dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginRight="10dp"
