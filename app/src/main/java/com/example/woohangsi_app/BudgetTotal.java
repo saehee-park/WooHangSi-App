@@ -12,10 +12,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class BudgetTotal extends AppCompatActivity {
 
-    TextView txtCustomer, txtMonth, Budget_view;
+    TextView txtCustomer, txtMonth, txtSetting;
     EditText Budget_write;
-    LinearLayout Budget_write_btn, Budget_view_btn;
-    Button btnApply, btnCancel, btnEdit;
+    LinearLayout Budget_write_btn;
+    Button btnApply, btnCancel, btnBack;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,43 +23,31 @@ public class BudgetTotal extends AppCompatActivity {
 
         txtCustomer = (TextView)findViewById(R.id.txtCustomer);
         txtMonth = (TextView)findViewById(R.id.txtMonth);
-        Budget_view = (TextView)findViewById(R.id.Budget_view);
 
         Budget_write = (EditText)findViewById(R.id.Budget_write);
 
-        Budget_write_btn = (LinearLayout)findViewById(R.id.Budget_write_btn);
-        Budget_view_btn = (LinearLayout)findViewById(R.id.Budget_view_btn);
-
         btnApply = (Button)findViewById(R.id.btnApply);
         btnCancel = (Button)findViewById(R.id.btnCancel);
-        btnEdit = (Button)findViewById(R.id.btnEdit);
+        btnBack = (Button)findViewById(R.id.btnBack);
 
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                BudgetTotal.super.onBackPressed();
+            }
+        });
 
         btnApply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Budget_view.setText(Budget_write.getText().toString());
-                Budget_write.setVisibility(View.GONE);
-                Budget_view.setVisibility(View.VISIBLE);
-                Budget_write_btn.setVisibility(View.GONE);
-                Budget_view_btn.setVisibility(View.VISIBLE);
-
+                Budget_write.setText(Budget_write.getText().toString());
                 Intent intent = new Intent();
-                intent.putExtra("total", Budget_view.getText());
+                intent.putExtra("total", Budget_write.getText().toString());
                 setResult(RESULT_OK, intent);
             }
         });
 
-        btnEdit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Budget_write.setVisibility(View.VISIBLE);
-                Budget_view.setVisibility(View.GONE);
-                Budget_write_btn.setVisibility(View.VISIBLE);
-                Budget_view_btn.setVisibility(View.GONE);
-
-            }
-        });
 
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override

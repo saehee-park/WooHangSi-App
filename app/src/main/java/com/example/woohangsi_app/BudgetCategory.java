@@ -150,6 +150,7 @@ public class BudgetCategory extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
                 String total = data.getStringExtra("total");
                 Budget.setText(total);
+                leftBudget.setText(Budget.getText());
             }
         }
 

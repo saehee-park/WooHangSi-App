@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class SelfAddBudgetCustom extends AppCompatActivity {
     EditText brand_self_name, brand_self_budget;
-    Button btnApply, btnCancel, btnBack;
+    Button btnApply, btnCancel;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +29,8 @@ public class SelfAddBudgetCustom extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.putExtra("name", brand_self_name.getText().toString());
                 setResult(RESULT_OK, intent);
+
+                finish();
             }
 
         });

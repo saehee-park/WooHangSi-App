@@ -44,7 +44,6 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:text="월 카테고리 예산 설정"
             android:textSize="30sp" />
 
@@ -587,7 +586,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="170dp"
+                    android:layout_width="203dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginRight="10dp"
