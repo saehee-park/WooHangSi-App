@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WooHangSiApp">
 
-        <activity android:name=".CategoryCustom">
+        <activity android:name=".BrandCustom">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -23,7 +23,6 @@
         <activity android:name=".BudgetTotal"/>
         <activity android:name=".SelfAddBudgetCustom"/>
         <activity android:name=".SpendThreeMonth"/>
-        <activity android:name=".BrandCustom"/>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
