@@ -5,8 +5,12 @@ public class Point {
 
   public Point() {
     subUrl = "/api/v1/point";
+
+    // 총 포인트 조회
     rootUrl = "/api/v1/point/";
+    // 포인트 적립/차감
     manageUrl = "/api/v1/point/manage";
+    // 포인트 내역 조회
     listUrl = "/api/v1/point/list";
   }
 

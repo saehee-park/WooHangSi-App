@@ -15,10 +15,10 @@ public class RequestAPI {
   HttpURLConnection conn;
 
   public RequestAPI() throws IOException {
-    mainUrl = "https://mdjaokjgv1.execute-api.ap-northeast-2.amazonaws.com/dev";
+    mainUrl = "https://hogs3d8gpa.execute-api.ap-southeast-2.amazonaws.com/dev";
   }
 
-  public void requestPost(String subUrl, String bodyString) throws IOException {
+  public String requestPost(String subUrl, String bodyString) throws IOException {
     this.urlBuilder = new StringBuilder(mainUrl+subUrl);
     this.url = new URL(this.urlBuilder.toString());
     this.conn = (HttpURLConnection) url.openConnection();
@@ -47,8 +47,9 @@ public class RequestAPI {
     rd.close();
     conn.disconnect();
     System.out.println(sb.toString());
+    return sb.toString();
   }
-  public void requestPut(String subUrl, String bodyString) throws IOException {
+  public String requestPut(String subUrl, String bodyString) throws IOException {
     this.urlBuilder = new StringBuilder(mainUrl+subUrl);
     this.url = new URL(this.urlBuilder.toString());
     this.conn = (HttpURLConnection) url.openConnection();
@@ -77,8 +78,9 @@ public class RequestAPI {
     rd.close();
     conn.disconnect();
     System.out.println(sb.toString());
+    return sb.toString();
   }
-  public void requestDelete(String subUrl, String bodyString) throws IOException {
+  public String requestDelete(String subUrl, String bodyString) throws IOException {
     this.urlBuilder = new StringBuilder(mainUrl+subUrl);
     this.url = new URL(this.urlBuilder.toString());
     this.conn = (HttpURLConnection) url.openConnection();
@@ -107,5 +109,6 @@ public class RequestAPI {
     rd.close();
     conn.disconnect();
     System.out.println(sb.toString());
+    return sb.toString();
   }
 }
