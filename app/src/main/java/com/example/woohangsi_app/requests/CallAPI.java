@@ -8,18 +8,19 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class CallAPI {
-  String subUrl, bodyString;
+  String subUrl, bodyString, method;
 
-  public CallAPI(String subUrl, String bodyString) {
+  public CallAPI(String subUrl, String bodyString, String method) {
     this.subUrl = subUrl;
     this.bodyString = bodyString;
+    this.method = method;
   }
 
   public String call() throws IOException {
     StringBuilder urlBuilder = new StringBuilder("https://openapi.wooribank.com:444"+this.subUrl);
     URL url = new URL(urlBuilder.toString());
     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-    conn.setRequestMethod("POST");
+    conn.setRequestMethod(method);
 
     conn.setRequestProperty("appKey", "l7xxkKhWS0DSuluIuNUdM55o81TXXsYU08o1");
     conn.setRequestProperty("Content-Type", "application/json");

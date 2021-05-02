@@ -3,6 +3,7 @@ package com.example.woohangsi_app;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
@@ -17,6 +18,7 @@ public class CategoryCustom extends AppCompatActivity {
             pet_img, present_img;
     TextView food, cafe, alchol, life, shopping, fashion, beauty, traffic, car, house, health, capital,
             culture, travel, educate, children, pet, present;
+    Button btnNext, btnPrev;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,11 +65,28 @@ public class CategoryCustom extends AppCompatActivity {
         pet = (TextView)findViewById(R.id.pet);
         present = (TextView)findViewById(R.id.present);
 
+        btnNext = (Button)findViewById(R.id.btnNext);
+        btnPrev = (Button)findViewById(R.id.btnPrev);
+
         cafe_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), BrandCustom.class);
                 startActivity(intent);
+            }
+        });
+
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                vFlipper.showNext();
+            }
+        });
+
+        btnPrev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                vFlipper.showPrevious();
             }
         });
 

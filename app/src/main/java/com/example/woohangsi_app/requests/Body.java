@@ -18,7 +18,7 @@ public class Body {
             "\"UTZ_MCHR_APP_VER_NM\": \"1.0.0\"\n" +
             "},\n" +
             "\"dataBody\": {\n" +
-            "\"INQ_ACNO\": \"1002123456789\",\n" +
+            "\"INQ_ACNO\": \"2112123456789\",\n" +
             " \"INQ_BAS_DT\": \"20190101\",\n" +
             " \"INQ_CUCD\": \"USD\",\n" +
             "\"ACCT_KND\": \"P\"\n" +

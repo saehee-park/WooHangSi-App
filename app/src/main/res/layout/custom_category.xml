@@ -20,6 +20,7 @@
         android:textSize="25sp" />
 
     <ViewFlipper
+        android:id="@+id/vFlipper"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -354,6 +355,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <Button
+                    android:id="@+id/btnNext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#00FFFFFF"
@@ -693,6 +695,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <Button
+                    android:id="@+id/btnPrev"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#00FFFFFF"

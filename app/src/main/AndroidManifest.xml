@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WooHangSiApp">
-        <activity android:name=".DrawerActivity">
+        <activity android:name=".CategoryCustom">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -32,7 +32,7 @@
         <activity android:name=".BudgetCheck"/>
         <activity android:name=".BudgetMonthly"/>
         <activity android:name=".BudgetTotal"/>
-        <activity android:name=".CategoryCustom"/>
+        <!--        <activity android:name=".CategoryCustom"/>-->
         <activity android:name=".CheckApi"/>
         <activity android:name=".ConsumptionPattern"/>
         <activity android:name=".EarnPoint"/>

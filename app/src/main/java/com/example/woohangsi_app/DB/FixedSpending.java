@@ -5,9 +5,14 @@ public class FixedSpending {
 
   public FixedSpending() {
     this.subUrl = "/api/v1/fixed_spending";
+
+    // 설정한 고정 지출 조회
     this.rootUrl = "/api/v1/fixed_spending/";
+    // 고정 지출 추가
     this.addUrl = "/api/v1/fixed_spending/add";
+    // 고정 지출 수정
     this.updateUrl = "/api/v1/fixed_spending/update";
+    // 고정 지출 삭제
     this.deleteUrl = "/api/v1/fixed_spending/delete";
   }
 
@@ -32,17 +37,19 @@ public class FixedSpending {
   }
 
 
-  public String getRootBody(int userID) {
+  public String getRootBody(int userID, String month) {
     return "{\n" +
-            "    \"user_id\": \""+userID+"\"\n" +
+            "    \"user_id\": \""+userID+"\", \n" +
+            "    \"month\": \""+month+"\" \n" +
             "  }";
   }
 
-  public String getAddBody(String fixedContent, int fixedAmount, int userID) {
+  public String getAddBody(String fixedContent, int fixedAmount, int userID, String month) {
     return "{\n" +
-            "    \"fixed_content\": \""+fixedContent+"\",\n" +
-            "    \"fixed_amount\": \""+fixedAmount+"\",\n" +
-            "    \"user_id\": \""+userID+"\"\n" +
+            "    \"fixed_content\": \""+fixedContent+"\", \n" +
+            "    \"fixed_amount\": \""+fixedAmount+"\", \n" +
+            "    \"user_id\": \""+userID+"\", \n" +
+            "    \"month\": \""+month+"\" \n" +
             "  }";
   }
 

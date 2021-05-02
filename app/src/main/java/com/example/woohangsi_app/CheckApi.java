@@ -15,7 +15,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.woohangsi_app.DB.Account;
+import com.example.woohangsi_app.DB.Brand;
+import com.example.woohangsi_app.DB.Category;
+import com.example.woohangsi_app.DB.Entire;
 import com.example.woohangsi_app.DB.FixedSpending;
+import com.example.woohangsi_app.DB.Point;
 import com.example.woohangsi_app.DB.RequestAPI;
 import com.example.woohangsi_app.requests.Body;
 import com.example.woohangsi_app.requests.CallAPI;
@@ -27,11 +32,23 @@ public class CheckApi extends AppCompatActivity {
 
     public static final String NOTIFICATION_CHANNEL_ID = "10001";
     private int count = 0;
-    Button btnGetIndivAllAccInfo, btnGetAccBasicInfo, btnGetAccTransList, btnGetCellCerti, btnExecuteCellCerti;
+
+    // acount
+    Button btnAllAccount, btnTransactions;
+    // brand
+    Button btnBrand, btnBrandAdd, btnBrandBudgetAdd, btnBrandSpendingAdd, btnBrandBudgetUpdate, btnBrandBudgetDelete;
+    // category
+    Button btnCategory, btnCategoryBudgetAdd, btnCategorySpendingAdd, btnCategoryBudgetUpdate, btnCategoryBudgetDelete;
+    // entire
+    Button btnEntire, btnEntireAdd, btnEntireUpdate, btnEntireDelete;
+    // fixed spending
+    Button btnFixedSpending, btnFixedSpendingAdd, btnFixedSpendingUpdate, btnFixedSpendingDelete;
+    // point
+    Button btnPoint, btnPointManage, btnPointList;
+
     String data;
     TextView textView;
 
-    Button postBtn, putBtn, deleteBtn;
     RequestAPI requestAPI;
 
     @Override
@@ -52,103 +69,239 @@ public class CheckApi extends AppCompatActivity {
 
         textView = (TextView)findViewById(R.id.textView2);
 
-        // request 버튼
-        Urls urls = new Urls();
-        Body body = new Body();
-
-        btnGetIndivAllAccInfo = (Button)findViewById(R.id.btnGetIndivAllAccInfo);
-        btnGetAccBasicInfo = (Button)findViewById(R.id.btnGetAccBasicInfo);
-        btnGetAccTransList = (Button)findViewById(R.id.btnGetAccTransList);
-        btnGetCellCerti = (Button)findViewById(R.id.btnGetCellCerti);
-        btnExecuteCellCerti = (Button)findViewById(R.id.btnExecuteCellCerti);
-
-        btnGetIndivAllAccInfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                handleBtn(urls.getGetIndivAllAccInfo(), body.getGetIndivAllAccInfo());
-            }
-        });
-        btnGetAccBasicInfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                handleBtn(urls.getGetAccBasicInfo(), body.getGetAccBasicInfo());
-            }
-        });
-        btnGetAccTransList.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                handleBtn(urls.getGetAccTransList(), body.getGetAccTransList());
-            }
-        });
-        btnGetCellCerti.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                handleBtn(urls.getGetCellCerti(), body.getGetCellCerti());
-            }
-        });
-        btnExecuteCellCerti.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                handleBtn(urls.getExecuteCellCerti(), body.getExecuteCellCerti());
-            }
-        });
 
 
-        // DB 버튼
-        try {
-            requestAPI = new RequestAPI();
-        } catch (IOException e) {
-            e.printStackTrace();
-            finish();
-        }
-        postBtn = (Button)findViewById(R.id.post);
-        postBtn.setOnClickListener(new View.OnClickListener() {
+        // account
+        btnAllAccount = (Button)findViewById(R.id.btnAllAccount);
+        btnTransactions = (Button)findViewById(R.id.btnTransactions);
+        // brand
+        btnBrand = (Button) findViewById(R.id.btnBrand);
+        btnBrandAdd = (Button) findViewById(R.id.btnBrandAdd);
+        btnBrandBudgetAdd = (Button) findViewById(R.id.btnBrandBudgetAdd);
+        btnBrandBudgetUpdate = (Button) findViewById(R.id.btnBrandBudgetUpdate);
+        btnBrandBudgetDelete = (Button) findViewById(R.id.btnBrandBudgetDelete);
+        btnBrandSpendingAdd = (Button) findViewById(R.id.btnBrandSpendingAdd);
+        // category
+        btnCategory = (Button) findViewById(R.id.btnCategory);
+        btnCategoryBudgetAdd = (Button) findViewById(R.id.btnCategoryBudgetAdd);
+        btnCategoryBudgetUpdate = (Button) findViewById(R.id.btnCategoryBudgetUpdate);
+        btnCategoryBudgetDelete = (Button) findViewById(R.id.btnCategoryBudgetDelete);
+        btnCategorySpendingAdd = (Button) findViewById(R.id.btnCategorySpendingAdd);
+        // entire
+        btnEntire = (Button) findViewById(R.id.btnEntire);
+        btnEntireAdd = (Button) findViewById(R.id.btnEntireAdd);
+        btnEntireUpdate = (Button) findViewById(R.id.btnEntireUpdate);
+        btnEntireDelete = (Button) findViewById(R.id.btnEntireDelete);
+        // fixed spending
+        btnFixedSpending = (Button) findViewById(R.id.btnFixedSpending);
+        btnFixedSpendingAdd = (Button) findViewById(R.id.btnFixedSpendingAdd);
+        btnFixedSpendingUpdate = (Button) findViewById(R.id.btnFixedSpendingUpdate);
+        btnFixedSpendingDelete = (Button) findViewById(R.id.btnFixedSpendingDelete);
+        // point
+        btnPoint = (Button) findViewById(R.id.btnPoint);
+        btnPointManage = (Button) findViewById(R.id.btnPointManage);
+        btnPointList = (Button) findViewById(R.id.btnPointList);
+
+        // account
+        btnAllAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new Thread() {
-                    public void run() {
-                        try {
-                            FixedSpending fixedSpending = new FixedSpending();
-                            requestAPI.requestPost(fixedSpending.getAddUrl(),fixedSpending.getAddBody("교통비",100000,1));
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }.start();
+                Account account = new Account();
+                handlePostBtn(account.getGetAllAccountUrl(),account.getGetAllAccountBody("1"));
             }
         });
 
-        putBtn = (Button)findViewById(R.id.put);
-        putBtn.setOnClickListener(new View.OnClickListener() {
+        btnTransactions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new Thread() {
-                    public void run() {
-                        try {
-                            FixedSpending fixedSpending = new FixedSpending();
-                            requestAPI.requestPut(fixedSpending.getUpdateUrl(),fixedSpending.getUpdateBody("월급",6000000, 1));
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }.start();
+                Account account = new Account();
+                handlePostBtn(account.getGetTransactionsUrl(),account.getGetTransactionsBody("1002881893528"));
             }
         });
 
-        deleteBtn = (Button)findViewById(R.id.delete);
-        deleteBtn.setOnClickListener(new View.OnClickListener() {
+        // brand
+        btnBrand.setOnClickListener(new View.OnClickListener() {
+            // 브랜드예산조회
             @Override
-            public void onClick(View v) {
-                new Thread() {
-                    public void run() {
-                        try {
-                            FixedSpending fixedSpending = new FixedSpending();
-                            requestAPI.requestDelete(fixedSpending.getDeleteUrl(),fixedSpending.getDeleteBody(1));
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }.start();
+            public void onClick(View view) {
+                Brand brand = new Brand();
+                handlePostBtn(brand.getRootUrl(),brand.getRootBody("1","1","3"));
+            }
+        });
+        btnBrandAdd.setOnClickListener(new View.OnClickListener() {
+            // 브랜드 추가
+            @Override
+            public void onClick(View view) {
+                Brand brand = new Brand();
+                handlePostBtn(brand.getAddUrl(),brand.getAddBody("BHC","C001"));
+            }
+        });
+        btnBrandBudgetAdd.setOnClickListener(new View.OnClickListener() {
+            // 브랜드 예산 추가
+            @Override
+            public void onClick(View view) {
+                Brand brand = new Brand();
+                handlePostBtn(brand.getBudgetAddUrl(),brand.getBudgetAddBody("1","1","500000","30000","3"));
+            }
+        });
+        btnBrandBudgetUpdate.setOnClickListener(new View.OnClickListener() {
+            // 브랜드 예산 수정
+            @Override
+            public void onClick(View view) {
+                Brand brand = new Brand();
+                handlePutBtn(brand.getBudgetUpdateUrl(),brand.getBudgetUpdateBody("400000","3"));
+            }
+        });
+        btnBrandBudgetDelete.setOnClickListener(new View.OnClickListener() {
+            // 브랜드 예산 삭제
+            @Override
+            public void onClick(View view) {
+                Brand brand = new Brand();
+                handleDeleteBtn(brand.getBudgetDeleteUrl(),brand.getBudgetDeleteBody("3"));
+            }
+        });
+        btnBrandSpendingAdd.setOnClickListener(new View.OnClickListener() {
+            // 브랜드 지출 추가
+            @Override
+            public void onClick(View view) {
+                Brand brand = new Brand();
+                handlePutBtn(brand.getSpendingUpdateUrl(),brand.getSpendingUpdateBody("20000","4"));
+            }
+        });
+
+        // category
+        btnCategory.setOnClickListener(new View.OnClickListener() {
+            // 카테고리예산조회
+            @Override
+            public void onClick(View view) {
+                Category category = new Category();
+                handlePostBtn(category.getRootUrl(), category.getRootBody(1,"C001","3"));
+            }
+        });
+        btnCategoryBudgetAdd.setOnClickListener(new View.OnClickListener() {
+            // 카테고리 예산 추가
+            @Override
+            public void onClick(View view) {
+                Category category = new Category();
+                handlePostBtn(category.getBudgetAddUrl(),category.getBudgetAddBody(400000,1,"C001","3"));
+            }
+        });
+        btnCategoryBudgetUpdate.setOnClickListener(new View.OnClickListener() {
+            // 카테고리 예산 수정
+            @Override
+            public void onClick(View view) {
+                Category category = new Category();
+                handlePutBtn(category.getBudgetUpdateUrl(),category.getBudgetUpdateBody(500000,3));
+            }
+        });
+        btnCategoryBudgetDelete.setOnClickListener(new View.OnClickListener() {
+            // 카테고리 예산 삭제
+            @Override
+            public void onClick(View view) {
+                Category category = new Category();
+                handleDeleteBtn(category.getBudgetDeleteUrl(),category.getBudgetDeleteBody(2));
+            }
+        });
+        btnCategorySpendingAdd.setOnClickListener(new View.OnClickListener() {
+            // 카테고리 지출 추가
+            @Override
+            public void onClick(View view) {
+                Category category = new Category();
+                handlePutBtn(category.getSpendingUpdateUrl(),category.getSpendingUpdateBody("3","40000"));
+            }
+        });
+
+        // entire
+        btnEntire.setOnClickListener(new View.OnClickListener() {
+            // 전체 예산/지출 조회
+            @Override
+            public void onClick(View view) {
+                Entire entire = new Entire();
+                handlePostBtn(entire.getRootUrl(), entire.getRootBody(1,"3"));
+            }
+        });
+        btnEntireAdd.setOnClickListener(new View.OnClickListener() {
+            // 전체 예산 추가
+            @Override
+            public void onClick(View view) {
+                Entire entire = new Entire();
+                handlePostBtn(entire.getAddUrl(), entire.getAddBody(1500000,1,"3"));
+            }
+        });
+        btnEntireUpdate.setOnClickListener(new View.OnClickListener() {
+            // 전체 예산 수정
+            @Override
+            public void onClick(View view) {
+                Entire entire = new Entire();
+                handlePutBtn(entire.getUpdateUrl(),entire.getUpdateBody(1800000,1));
+            }
+        });
+        btnEntireDelete.setOnClickListener(new View.OnClickListener() {
+            // 전체 예산 삭제
+            @Override
+            public void onClick(View view) {
+                Entire entire = new Entire();
+                handleDeleteBtn(entire.getDeleteUrl(),entire.getDeleteBody(1));
+            }
+        });
+
+        // fixed spending
+        btnFixedSpending.setOnClickListener(new View.OnClickListener() {
+            // 고정 \n지출 \n조회
+            @Override
+            public void onClick(View view) {
+                FixedSpending fixedSpending = new FixedSpending();
+                handlePostBtn(fixedSpending.getRootUrl(), fixedSpending.getRootBody(1,"3"));
+            }
+        });
+        btnFixedSpendingAdd.setOnClickListener(new View.OnClickListener() {
+            // 고정 지출 추가
+            @Override
+            public void onClick(View view) {
+                FixedSpending fixedSpending = new FixedSpending();
+                handlePostBtn(fixedSpending.getAddUrl(),fixedSpending.getAddBody("월세",450000,1,"3"));
+            }
+        });
+        btnFixedSpendingUpdate.setOnClickListener(new View.OnClickListener() {
+            // 고정 지출 수정
+            @Override
+            public void onClick(View view) {
+                FixedSpending fixedSpending = new FixedSpending();
+                handlePutBtn(fixedSpending.getUpdateUrl(),fixedSpending.getUpdateBody("관리비",30000,1));
+            }
+        });
+        btnFixedSpendingDelete.setOnClickListener(new View.OnClickListener() {
+            // 고정 지출 삭제
+            @Override
+            public void onClick(View view) {
+                FixedSpending fixedSpending = new FixedSpending();
+                handleDeleteBtn(fixedSpending.getDeleteUrl(), fixedSpending.getDeleteBody(5));
+            }
+        });
+
+        // point
+        btnPoint.setOnClickListener(new View.OnClickListener() {
+            // 총 포인트 조회
+            @Override
+            public void onClick(View view) {
+                Point point = new Point();
+                handlePostBtn(point.getRootUrl(),point.getRootBody(1));
+            }
+        });
+        btnPointManage.setOnClickListener(new View.OnClickListener() {
+            // 포인트 적립/차감
+            @Override
+            public void onClick(View view) {
+                Point point = new Point();
+                handlePostBtn(point.getManageUrl(),point.getManageBody(1,"적립",1));
+            }
+        });
+        btnPointList.setOnClickListener(new View.OnClickListener() {
+            // 포인트 내역 조회
+            @Override
+            public void onClick(View view) {
+                Point point = new Point();
+                handlePostBtn(point.getListUrl(),point.getListBody(1));
             }
         });
     }
@@ -189,18 +342,19 @@ public class CheckApi extends AppCompatActivity {
             notificationManager.createNotificationChannel(channel);
 
         }else builder.setSmallIcon(R.mipmap.ic_launcher); // Oreo 이하에서 mipmap 사용하지 않으면 Couldn't create icon: StatusBarIcon 에러남
-
         assert notificationManager != null;
         notificationManager.notify(1234, builder.build()); // 고유숫자로 노티피케이션 동작시킴
 
     }
 
-    public void handleBtn(String subUrl, String bodyString) {
-        new Thread() {
+    public void handlePostBtn(String subUrl, String bodyString) {
+        textView = (TextView)findViewById(R.id.textView2);
+        Thread thread = new Thread() {
             public void run() {
                 try {
-                    CallAPI callAPI = new CallAPI(subUrl, bodyString);
-                    data = callAPI.call();
+                    requestAPI = new RequestAPI();
+
+                    data = requestAPI.requestPost(subUrl, bodyString);
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -211,8 +365,38 @@ public class CheckApi extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
-        }.start();
+        };
+        thread.start();
+    }
+    public void handlePutBtn(String subUrl, String bodyString) {
+        textView = (TextView)findViewById(R.id.textView2);
+        Thread thread = new Thread() {
+            public void run() {
+                try {
+                    requestAPI = new RequestAPI();
 
+                    requestAPI.requestPut(subUrl, bodyString);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        thread.start();
+    }
+    public void handleDeleteBtn(String subUrl, String bodyString) {
+        textView = (TextView)findViewById(R.id.textView2);
+        Thread thread = new Thread() {
+            public void run() {
+                try {
+                    requestAPI = new RequestAPI();
+
+                    requestAPI.requestDelete(subUrl, bodyString);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        thread.start();
     }
 
 }
