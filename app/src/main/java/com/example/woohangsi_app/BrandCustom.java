@@ -19,9 +19,10 @@ public class BrandCustom extends AppCompatActivity {
 
     ImageView starbucks_img, twosome_img, ediya_img, gongcha_img, backdabang_img, sulbing_img, pascucci_img, polbaset_img, baskin_img, tomtom_img, self1_img, self2_img,
             self3_img, self4_img, self5_img, self6_img, self7_img;
-    TextView self1, self2;
+    TextView self1, self2, self3, self4, self5, self6, self7;
     Button nextBtn, prevBtn;
-    int i;
+    TextView [] self_text;
+    int which;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,12 +50,18 @@ public class BrandCustom extends AppCompatActivity {
 
         self1 = (TextView) findViewById(R.id.self1);
         self2 = (TextView) findViewById(R.id.self2);
+        self3 = (TextView) findViewById(R.id.self3);
+        self4 = (TextView) findViewById(R.id.self4);
+        self5 = (TextView) findViewById(R.id.self5);
+        self6 = (TextView) findViewById(R.id.self6);
+        self7 = (TextView) findViewById(R.id.self7);
 
 
         ImageView[] brand_img = {starbucks_img, twosome_img, ediya_img, gongcha_img, backdabang_img, sulbing_img, pascucci_img, polbaset_img, baskin_img, tomtom_img};
         ImageView[] self_img = {self1_img, self2_img, self3_img, self4_img, self5_img, self6_img, self7_img};
+        self_text = new TextView[]{self1, self2, self3, self4, self5, self6, self7};
 
-        for (i = 0; i < brand_img.length; i++) {
+        for (int i = 0; i < brand_img.length; i++) {
             final int index;
             index = i;
 
@@ -83,10 +90,12 @@ public class BrandCustom extends AppCompatActivity {
             }
         });
 
-        for (i = 0; i < self_img.length; i++) {
+        for (int i = 0; i < self_img.length; i++) {
+            int finalI = i;
             self_img[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    which = finalI;
                     Intent intent = new Intent(getApplicationContext(), SelfAddBudgetCustom.class);
                     startActivityForResult(intent, REQUEST_CODE_MENU);
                 }
@@ -99,8 +108,7 @@ public class BrandCustom extends AppCompatActivity {
         if (requestCode == REQUEST_CODE_MENU) {
             if (resultCode == RESULT_OK) {
                 String name = data.getStringExtra("name");
-                self1.setText(name);
-
+                self_text[which].setText(name);
             }
         }
 
